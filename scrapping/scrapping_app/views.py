@@ -139,10 +139,10 @@ class GetAuctionsSuperrare(APIView):
             driver = webdriver.Chrome(executable_path=str(os.environ.get('CHROMEDRIVER_PATH')), options=options)
             # driver = webdriver.Chrome(executable_path=driver_path)
             print("==============")
-            # driver.implicitly_wait(60)
+            driver.implicitly_wait(60)
             driver.get('http://www.superrare.co/market')
             print("============")
-            time.sleep(30)
+            time.sleep(5)
             print("==============")
 
             containers = driver.find_elements_by_xpath('//div[@class="row new-grid-row-margin-l-r"]/div')
