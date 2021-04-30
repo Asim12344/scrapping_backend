@@ -1,1 +1,1 @@
-web: gunicorn scrapping.wsgi
+web: gunicorn scrapping.wsgi --timeout 60

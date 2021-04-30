@@ -47,7 +47,7 @@ class GetAuctions(APIView):
             # driver.implicitly_wait(60)
             driver.get('https://foundation.app/artworks')
             print("============")
-            time.sleep(10)
+            time.sleep(30)
             print("==============")
             containers = driver.find_elements_by_xpath('//div[@class="css-1fjs75c"]/div')
             # print(containers)
