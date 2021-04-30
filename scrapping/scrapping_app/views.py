@@ -41,7 +41,7 @@ class GetAuctions(APIView):
             # options.add_argument('--no-sandbox')
             # driver = webdriver.Chrome(executable_path=driver_path, options=options)
             driver = webdriver.Chrome(executable_path=driver_path)
-            print("==============")
+            print("===============")
             # driver.implicitly_wait(60)
             driver.get('https://foundation.app/artworks')
             print("============")
