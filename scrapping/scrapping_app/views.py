@@ -22,8 +22,8 @@ class GetAuctions(APIView):
             company_name = data['companyName'] 
             print("=========GetAuctions=========")
             print(company_name)
-            driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
-            print(driver_path)
+            # driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
+            # print(driver_path)
             
             user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
             options = webdriver.ChromeOptions()
@@ -119,8 +119,8 @@ class GetAuctionsSuperrare(APIView):
             company_name = data['companyName'] 
             print("========GetAuctionsSuperrare==========")
             print(company_name)
-            driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
-            print(driver_path)
+            # driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
+            # print(driver_path)
             user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
             options = webdriver.ChromeOptions()
             options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
