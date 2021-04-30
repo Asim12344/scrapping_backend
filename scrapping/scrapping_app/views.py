@@ -20,7 +20,7 @@ class GetAuctions(APIView):
         data = self.request.query_params
         try:
             company_name = data['companyName'] 
-            print("=========GetAuctions=========")
+            print("=========GetAuctions Foundation=========")
             print(company_name)
             # driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
             # print(driver_path)
