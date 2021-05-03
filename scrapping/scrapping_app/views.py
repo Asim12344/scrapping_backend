@@ -139,7 +139,7 @@ class GetAuctionsSuperrare(APIView):
             driver = webdriver.Chrome(executable_path=driver_path, options=options)
             # driver = webdriver.Chrome(executable_path=driver_path)
             print("==============")
-            driver.implicitly_wait(10)
+            driver.implicitly_wait(30)
             driver.get('http://www.superrare.co/market')
             print("============")
             time.sleep(30)
