@@ -22,12 +22,12 @@ class GetAuctions(APIView):
             company_name = data['companyName'] 
             print("=========GetAuctions Foundation=========")
             print(company_name)
-            # driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
-            # print(driver_path)
+            driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
+            print(driver_path)
             
             user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
             options = webdriver.ChromeOptions()
-            options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
+            # options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
 
             options.headless = True
             options.add_argument(f'user-agent={user_agent}')
@@ -41,13 +41,13 @@ class GetAuctions(APIView):
             options.add_argument('--disable-gpu')
             options.add_argument('--disable-dev-shm-usage')
             options.add_argument('--no-sandbox')
-            driver = webdriver.Chrome(executable_path=str(os.environ.get('CHROMEDRIVER_PATH')), options=options)
+            driver = webdriver.Chrome(executable_path=driver_path, options=options)
             # driver = webdriver.Chrome(executable_path=driver_path)
             print("===============")
-            driver.implicitly_wait(60)
+            driver.implicitly_wait(30)
             driver.get('https://foundation.app/artworks')
             print("============")
-            time.sleep(5)
+            time.sleep(30)
             print("==============")
             containers = driver.find_elements_by_xpath('//div[@class="css-1fjs75c"]/div')
             # print(containers)
@@ -119,11 +119,11 @@ class GetAuctionsSuperrare(APIView):
             company_name = data['companyName'] 
             print("========GetAuctionsSuperrare==========")
             print(company_name)
-            # driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
-            # print(driver_path)
+            driver_path = os.path.join(settings.STATIC_ROOT, "chromedriver.exe")
+            print(driver_path)
             user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
             options = webdriver.ChromeOptions()
-            options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
+            # options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
             options.headless = True
             options.add_argument(f'user-agent={user_agent}')
             options.add_argument("--window-size=1920,1080")
@@ -136,13 +136,13 @@ class GetAuctionsSuperrare(APIView):
             options.add_argument('--disable-gpu')
             options.add_argument('--disable-dev-shm-usage')
             options.add_argument('--no-sandbox')
-            driver = webdriver.Chrome(executable_path=str(os.environ.get('CHROMEDRIVER_PATH')), options=options)
+            driver = webdriver.Chrome(executable_path=driver_path, options=options)
             # driver = webdriver.Chrome(executable_path=driver_path)
             print("==============")
-            driver.implicitly_wait(60)
+            driver.implicitly_wait(10)
             driver.get('http://www.superrare.co/market')
             print("============")
-            time.sleep(5)
+            time.sleep(30)
             print("==============")
 
             containers = driver.find_elements_by_xpath('//div[@class="row new-grid-row-margin-l-r"]/div')
